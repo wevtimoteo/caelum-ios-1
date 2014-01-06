@@ -26,4 +26,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showMessage:(id)sender
+{
+    self.labelText.text = self.textField.text;
+    //[[self labelText] setText:[[self textField] text]];
+}
+
+- (IBAction)sum:(id)sender
+{
+    CGFloat result = [self.num1.text floatValue] + [self.num2.text floatValue];
+    self.result.text = [[NSString alloc] initWithFormat:@"%.4f", result];
+}
+
+- (IBAction)sliderChanged:(UISlider *)slider
+{
+    NSString *valueStr = [NSString stringWithFormat:@"%.4f", slider.value];
+
+    if (slider.tag == 1) {
+        self.num1.text = valueStr;
+    } else {
+        self.num2.text = valueStr;
+    }
+
+}
+
 @end

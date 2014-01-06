@@ -10,4 +10,15 @@
 
 @interface ViewController : UIViewController
 
+@property (weak) IBOutlet UILabel *labelText;
+@property (weak) IBOutlet UITextField *textField;
+
+@property (weak) IBOutlet UITextField *num1;
+@property (weak) IBOutlet UITextField *num2;
+@property (weak) IBOutlet UILabel *result;
+
+- (IBAction)showMessage:(id)sender;
+- (IBAction)sliderChanged:(UISlider *)slider;
+
+
 @end
